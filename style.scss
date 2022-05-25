@@ -1,0 +1,23 @@
+body {
+  background: rgb(233, 233, 199);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.grad {
+  position: absolute;
+  font-size: 50px;
+  animation: wiggle .1s infinite alternate;
+  transform-origin: center 60%;
+
+  @keyframes wiggle {
+    0% {
+      transform: rotate(-6deg);
+    }
+
+    100% {
+      transform: rotate(6deg);
+    }
+  }
+}

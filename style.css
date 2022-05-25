@@ -1,0 +1,38 @@
+body {
+  background: #e9e9c7;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.grad {
+  position: absolute;
+  font-size: 50px;
+  -webkit-animation: wiggle .1s infinite alternate;
+          animation: wiggle .1s infinite alternate;
+  -webkit-transform-origin: center 60%;
+          transform-origin: center 60%;
+}
+
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg);
+  }
+  100% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg);
+  }
+  100% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
