@@ -1,13 +1,23 @@
-body {
-  background: #e9e9c7;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+html {
+  font-size: 16px;
 }
 
-.grad {
+.scatter {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.scatter .icon {
+  display: block;
   position: absolute;
-  font-size: 50px;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: -4rem 0 0 -4rem;
   -webkit-animation: wiggle .1s infinite alternate;
           animation: wiggle .1s infinite alternate;
   -webkit-transform-origin: center 60%;
@@ -34,5 +44,70 @@ body {
     -webkit-transform: rotate(6deg);
             transform: rotate(6deg);
   }
+}
+
+.scatter .icon:nth-child(1) {
+  -webkit-transition: top 0.75s ease-out, left 0.75s ease-out;
+  transition: top 0.75s ease-out, left 0.75s ease-out;
+}
+
+.scatter .icon:nth-child(1) p {
+  -webkit-transition: -webkit-transform 1.13s ease-out;
+  transition: -webkit-transform 1.13s ease-out;
+  transition: transform 1.13s ease-out;
+  transition: transform 1.13s ease-out, -webkit-transform 1.13s ease-out;
+}
+
+.scatter .icon:nth-child(2) {
+  -webkit-transition: top 0.67s ease-out, left 0.67s ease-out;
+  transition: top 0.67s ease-out, left 0.67s ease-out;
+}
+
+.scatter .icon:nth-child(2) p {
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out;
+  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+}
+
+.scatter .icon:nth-child(3) {
+  -webkit-transition: top 0.5s ease-out, left 0.5s ease-out;
+  transition: top 0.5s ease-out, left 0.5s ease-out;
+}
+
+.scatter .icon:nth-child(3) p {
+  -webkit-transition: -webkit-transform 0.77s ease-out;
+  transition: -webkit-transform 0.77s ease-out;
+  transition: transform 0.77s ease-out;
+  transition: transform 0.77s ease-out, -webkit-transform 0.77s ease-out;
+}
+
+.scatter .icon:nth-child(4) {
+  -webkit-transition: top 0.42s ease-out, left 0.42s ease-out;
+  transition: top 0.42s ease-out, left 0.42s ease-out;
+}
+
+.scatter .icon:nth-child(4) p {
+  -webkit-transition: -webkit-transform 0.62s ease-out;
+  transition: -webkit-transform 0.62s ease-out;
+  transition: transform 0.62s ease-out;
+  transition: transform 0.62s ease-out, -webkit-transform 0.62s ease-out;
+}
+
+.scatter .icon:nth-child(5) {
+  -webkit-transition: top 0.45s ease-out, left 0.45s ease-out;
+  transition: top 0.45s ease-out, left 0.45s ease-out;
+}
+
+.scatter .icon:nth-child(5) p {
+  -webkit-transition: -webkit-transform 0.44s ease-out;
+  transition: -webkit-transform 0.44s ease-out;
+  transition: transform 0.44s ease-out;
+  transition: transform 0.44s ease-out, -webkit-transform 0.44s ease-out;
+}
+
+.scatter .icon p {
+  position: relative;
+  size: 20px;
 }
 /*# sourceMappingURL=style.css.map */

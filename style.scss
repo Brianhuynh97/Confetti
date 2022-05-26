@@ -1,23 +1,93 @@
-body {
-  background: rgb(233, 233, 199);
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+// body {
+//   background: rgb(233, 233, 199);
+//   height: 100%;
+//   width: 100%;
+//   overflow: hidden;
+// }
+
+// .grad {
+//   position: absolute;
+//   font-size: 50px;
+//   animation: wiggle .1s infinite alternate;
+//   transform-origin: center 60%;
+
+//   @keyframes wiggle {
+//     0% {
+//       transform: rotate(-6deg);
+//     }
+
+//     100% {
+//       transform: rotate(6deg);
+//     }
+//   }
+// }
+$dark: #383838;
+$light: #f5f5f5;
+
+html {
+  font-size: 16px;
 }
 
-.grad {
-  position: absolute;
-  font-size: 50px;
-  animation: wiggle .1s infinite alternate;
-  transform-origin: center 60%;
+.scatter {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: $light;
 
-  @keyframes wiggle {
-    0% {
-      transform: rotate(-6deg);
+  .icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1rem;
+    height: 1rem;
+    margin: -4rem 0 0 -4rem;
+    animation: wiggle .1s infinite alternate;
+    transform-origin: center 60%;
+
+    @keyframes wiggle {
+      0% {
+        transform: rotate(-6deg);
+      }
+
+      100% {
+        transform: rotate(6deg);
+      }
     }
 
-    100% {
-      transform: rotate(6deg);
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        $speed: ((random(50) * .01) + .25);
+        transition: top $speed + s ease-out, left $speed + s ease-out;
+      }
+
+      &:nth-child(#{$i}) p {
+        $speed: ((random(50) * .01) + .25);
+        transition: transform $speed + (random(50) * .01) + s ease-out;
+      }
+    }
+
+    p {
+      position: relative;
+      // display: block;
+      size: 20px;
+      // animation: wiggle .1s infinite alternate;
+      // transform-origin: center 60%;
+
+      // @keyframes wiggle {
+      //   0% {
+      //     transform: rotate(-6deg);
+      //   }
+
+      //   100% {
+      //     transform: rotate(6deg);
+      //   }
+      // }
+
+      // width: rem;
+      // height: 6rem;
+      // border: solid .5rem $light;
     }
   }
 }
